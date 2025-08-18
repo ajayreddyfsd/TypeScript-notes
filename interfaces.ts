@@ -40,20 +40,5 @@ interface User {
     permissions: ["delete_users", "ban_users"],
     greet() { return "I'm the boss"; }
   };
-  
-  // =============================================
-  // 3. UNION TYPES (THIS OR THAT)
-  // =============================================
-  type Status = "loading" | "success" | "error";
-  // ↑         ↑    ↑           ↑         ↑
-  // |         |    |           |         └── Third possible string value
-  // |         |    |           └── Second possible string value
-  // |         |    └── First possible string value
-  // |         └── Literal string values
-  // └── Type alias
-  
-  // Usage:
-  let currentStatus: Status;
-  currentStatus = "loading"; // ✅
-  currentStatus = "offline"; // ❌ Not allowed!
+
   
