@@ -13,5 +13,5 @@ type PersonType<T extends { name: string }> = {
   };
   
   //? missing name → ❌ Error
-  // const person2: PersonType<{ age: number }> = { person: { age: 21 } }; 
+  const person2: PersonType<{ age: number }> = { person: { age: 21 } }; 
   

@@ -1,6 +1,6 @@
 // T must be a function that returns a string
 //! <T extends () => string> means T must be a function
-//! the function must return string, not number, not boolean
+//$ the function must return string, not number, not boolean
 
 type FuncReturnString<T extends () => string> = {
     func: T;
@@ -12,5 +12,5 @@ type FuncReturnString<T extends () => string> = {
   };
   
   //? wrong return type → ❌ Error
-  // const sayNumber: FuncReturnString<() => number> = { func: () => 123 }; 
+  const sayNumber: FuncReturnString<() => number> = { func: () => 123 }; 
   
